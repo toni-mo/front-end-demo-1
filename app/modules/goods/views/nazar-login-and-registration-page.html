@@ -1,0 +1,204 @@
+<div ng-controller="submitCtrl">
+	<div id="startPage" class="container">
+		<div class= "row border" align="center">
+			<div id="welcome" class= "col-xs-12 border" align="center">
+				<h2>Welcome To Our Website!</h2>
+				<h1>IT'S NICE TO MEET YOU</h1>
+            </div>
+ 		</div>
+ 		<div class= "row border" align="center">          
+            <div class= "col-xs-4 border" align="center">
+        	</div>
+        	<div id="join" class= "col-xs-4 border" align="center" text="1E28B2">
+        		<button type="button" class="btn btn-default" data-toggle="modal" data-target=".login_form"><h3>Join To Us</h3></button>
+        	</div>
+		</div>
+	</div>
+
+		<!CLASS FOR LOGIN WHEN YOU CLICK ON BUTTON>
+		<div class="modal login_form" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	 		<div class="modal-dialog modal-sm">
+	    		<div class="modal-content">
+	     			<div class="modal-body" align="center">
+	  					<form ng-submit="ctrl.submit()" name="myForm">
+				          	<div class="form-group">
+				           		<label for="recipient-name" class="control-label">Login </label>
+				            	<input type="text" class="form-control" ng-model="ctrl.user.username" required ng-minlength="3">
+				          	</div>
+				          	<div class="form-group">
+				            	<label for="message-text" class="control-label">Password:</label>
+				            	<input type="password" class="form-control" ng-model="ctrl.user.password" required ng-minlength="6">
+				          	</div>
+				        </form> 
+				        <button type="submit" class="btn btn-primary" data-dismiss="modal" ng-disabled="myForm.$invalid">Login</button>
+				        <p align="center">If you haven't account, you can register now as <a data-toggle="modal" data-target=".registration_form_customer" data-dismiss="modal"> customer </a> or <a data-toggle="modal" data-target=".registration_form_shop" data-dismiss="modal"> shop </a></p>
+	      			</div>
+	      			<div class="modal-footer">
+	       				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	      			</div>
+	   			</div>
+	  		</div>
+		</div>
+
+		<!CLASS FOR REGISTRATION CUSTOMER WHEN YOU CLICK ON BUTTON>
+		<div class="modal registration_form_customer" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+					<div class="modal-body" align="center">
+	  					<form class="form-horizontal" novalidate name="customerForm">
+	  						<div class="form-group">
+    							<label for="user_name" class="col-sm-4 control-label">Name</label>
+   								<div class="col-sm-6">
+							      	<input type="text" class="form-control" name="firstName" ng-model="ctrl.user.firstName" placeholder="Nazar" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_surname" class="col-sm-4 control-label">Surname</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="surName" placeholder="Motruk"
+							      	ng-model="ctrl.user.surName" required>
+							    </div>
+							</div>
+							<div class="form-group">
+						      	<label for="disabledSelect" class="col-sm-4 control-label">Gender customer</label>
+						      	<div class="col-sm-6">
+							      	<select class="form-control">
+							        	<option>Male</option>
+							        	<option>Female</option>
+							      	</select>
+							    </div>
+						    </div>
+						    <div class="form-group">
+							    <label for="user_birth" class="col-sm-4 control-label">Date of Birth</label>
+							    <div class="col-sm-6">
+							      	<input type="date" class="form-control" name="dob" ng-model="ctrl.user.dob" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_e-mail" class="col-sm-4 control-label">E-mail</label>
+							    <div class="col-sm-6">
+							      	<input type="email" class="form-control" name="eMail" placeholder="nazar-666@yandex.ua" ng-model="ctrl.user.eMail" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_phone_number" class="col-sm-4 control-label">Phone number</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="phoneNumber" placeholder="+380976901379" ng-model="ctrl.user.phoneNumber"required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_password" class="col-sm-4 control-label">Password</label>
+							    <div class="col-sm-6">
+							      	<input type="password" class="form-control" name="password" ng-model="ctrl.user.password" ng-minlength="6" required >
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_repeat_password" class="col-sm-4 control-label">Repeat password</label>
+							    <div class="col-sm-6">
+							      	<input type="password" class="form-control" name="repeatPasswd" ng-model="ctrl.user.repeatPasswd" ng-minlength="6" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <div class="col-sm-12">
+							     	<div class="checkbox">
+								        <label>
+								          	<input type="checkbox"> Remember me
+								        </label>
+							     	</div>
+							    </div>
+							</div>
+							</form>
+							<button type="submit" class="btn btn-primary" data-dismiss="modal" ng-disabled="customerForm.$invalid">Register Now</button>
+				        </div>
+	      			<div class="modal-footer">
+	       				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	      			</div>
+	   			</div>
+	  		</div>
+		</div>
+
+		<!CLASS FOR REGISTRATION SHOP WHEN YOU CLICK ON BUTTON>
+		<div class="modal registration_form_shop" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+					<div class="modal-body" align="center">
+	  					<form class="form-horizontal" novalidate name="shopForm">
+	  						<div class="form-group">
+    							<label for="shop_name" class="col-sm-4 control-label">Shop's name</label>
+   								<div class="col-sm-6">
+							      	<input type="text" class="form-control" name="shopName" ng-model="ctrl.user.shopName" placeholder="Eldorado" required>
+							    </div>
+							</div>
+						    <div class="form-group">
+							    <label for="county" class="col-sm-4 control-label">Country</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="country" ng-model="ctrl.user.country" placeholder="Ukraine" required>
+							    </div>
+							</div>
+						    <div class="form-group">
+							    <label for="region" class="col-sm-4 control-label">Region</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="region" ng-model="ctrl.user.region" placeholder="Ivano-Frankivsk" required>
+							    </div>
+							</div>
+						    <div class="form-group">
+							    <label for="city" class="col-sm-4 control-label">City</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="city" ng-model="ctrl.user.city" placeholder="Ivano-Frankivsk" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="street" class="col-sm-4 control-label">Street</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="street" ng-model="ctrl.user.street" placeholder="Novhorodska" required>
+							    </div>
+							</div>
+						    <div class="form-group">
+							    <label for="building" class="col-sm-4 control-label">Building</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="building" ng-model="ctrl.user.building" placeholder="6" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="eMail" class="col-sm-4 control-label">E-mail</label>
+							    <div class="col-sm-6">
+							      	<input type="email" class="form-control" name="eMail" ng-model="ctrl.user.eMail" placeholder="eldorado@yandex.ua" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="shopPhone" class="col-sm-4 control-label">Phone number</label>
+							    <div class="col-sm-6">
+							      	<input type="text" class="form-control" name="shopPhone" ng-model="ctrl.user.shopPhone" placeholder="+380976901379" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_password" class="col-sm-4 control-label">Password</label>
+							    <div class="col-sm-6">
+							      	<input type="password" class="form-control" name="shopPasswd" ng-model="ctrl.user.shopPasswd" ng-minlength="6" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="user_repeat_password" class="col-sm-4 control-label">Repeat password</label>
+							    <div class="col-sm-6">
+							      	<input type="password" class="form-control" name="repPasswd" ng-model="ctrl.user.repPasswd" ng-minlength="6" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <div class="col-sm-6" align="right">
+							     	<div class="checkbox">
+								        <label>
+								          	<input type="checkbox"> Remember me
+								        </label>
+							     	</div>
+							    </div>
+							</div>
+						</form>
+						<button type="submit" class="btn btn-primary" data-dismiss="modal" ng-disabled="shopForm.$invalid">Register Now</button>
+	      			</div>
+	      			<div class="modal-footer" align="left">
+	       				<button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
+	      			</div>
+	   			</div>
+	  		</div>
+		</div>
+</div>

@@ -33,8 +33,11 @@ phonecatApp.config(['$routeProvider',
       when('/admin', {
         templateUrl: 'modules/admin/views/main.html'
       }).
-      when('/goods', {
-        templateUrl: 'modules/goods/views/main.html'
+      when('/character', {
+        templateUrl: 'modules/goods/views/nazar-characteristic-of-product.html'
+      }).
+      when('/logIn', {
+        templateUrl: 'modules/goods/views/nazar-login-and-registration-page.html'
       }).
       otherwise({
         redirectTo: '/phones'
