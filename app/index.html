@@ -3,13 +3,25 @@
 <head>
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/app.css"> -->
+<!-- 
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/app.css"> 
   <link rel="stylesheet" href="css/animations.css">
   
   <!-- Our Styles -->
+  <link rel="stylesheet" type="text/css" href="modules/admin/css/zarin-adm-page-style.css">
+  <link rel="stylesheet" type="text/css" href="modules/admin/css/zarin-shop-admin-page-style.css">
+  <link rel="stylesheet" type="text/css" href="modules/admin/css/zarin-user-profile-style.css">
+  <link rel="stylesheet" href="https:///maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="modules/home/css/anton-main-page-styles.css">
+  
+
+
 <!--   <link rel="stylesheet" type="text/css" href="modules/home/css/anton-main-page-styles.css"> -->
   <link href="modules/goods/css/nazar-style-for_characteristic-of-product.css" rel="stylesheet" type="text/css" media="screen"/>
   <link href="modules/goods/css/nazar-style-for-login-page.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -29,7 +41,18 @@
   <!-- Modules and controllers -->
   <!-- Admin module -->
   <script type="text/javascript" src="modules/admin/index.js"></script>
-  <script type="text/javascript" src="modules/admin/controllers/example.js"></script>
+  <!-- Controllers -->
+  <script type="text/javascript" src="modules/admin/controllers/BucketCtrl.js"></script>
+  <script type="text/javascript" src="modules/admin/controllers/PurchasesCtrl.js"></script>
+  <script type="text/javascript" src="modules/admin/controllers/ShopsCtrl.js"></script>
+  <script type="text/javascript" src="modules/admin/controllers/UsersCtrl.js"></script>
+  <script type="text/javascript" src="modules/admin/controllers/LineChartCtrl.js"></script>
+  <!-- Including libs for templates -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+  <script type="text/javascript" src="modules/admin/otherjs/templates.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
   <!-- Goods module -->
   <script type="text/javascript" src="modules/goods/index.js"></script>
   <script type="text/javascript" src="modules/goods/controllers/imagesCtrl.js"></script>
