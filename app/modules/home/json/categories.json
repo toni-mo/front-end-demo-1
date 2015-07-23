@@ -1,0 +1,24 @@
+[
+	{	
+		"id": "category-sport",
+		"name": "Sport",
+		"subcategories": [
+			{
+				"id": "subcategory-id",
+				"name": "football"
+			},
+			{
+				"name": "basketball"
+			},
+			{
+				"name": "water polo"
+			}
+		]
+	},
+	{
+		"name": "Clothing"
+	},
+	{
+		"name": "Health & Beauty"
+	}
+]

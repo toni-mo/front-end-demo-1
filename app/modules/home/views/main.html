@@ -1,4 +1,4 @@
-<div ng-controller="TestCtrl">
+<div ng-controller="MainCtrl">
 <!-- Navigation -->
 <!-- .navbar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -110,13 +110,13 @@
 					{{hello + newVar}}
 					<ul class="list-unstyled my-sidebar">
 						<li ng-repeat="category in categories">
-							<a href="#">{{1+2}} Hello</a>
+							<a href="#/admin">{{category.name}}</a>
 							<span class="glyphicon glyphicon-menu-right text-primary"></span>
 							<ul class="sub-menu panel panel-inverse list-unstyled border">
 								<div class="panel-heading panel-heading-inverse">{{category.name}}</div>
 								<div class="panel-body">
 									<li ng-repeat="subcategory in category.subcategories">
-										<a href="#" ng-click="MainCtrl.categoryAlert(subcategory.name)">{{subcategory.name}}</a>
+										<a href="#/home/{{subcategory.id}}" ng-click="MainCtrl.categoryAlert(subcategory.name)">{{subcategory.name}}</a>
 									</li>
 								</div>
 							</ul>
