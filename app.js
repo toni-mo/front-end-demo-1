@@ -9,7 +9,7 @@ var phonecatApp = angular.module('phonecatApp', [
   'phonecatControllers',
   'phonecatFilters',
   'phonecatServices',
-  // Our modules
+  // Our modules our modules
   'home',
   'admin',
   'goods'
