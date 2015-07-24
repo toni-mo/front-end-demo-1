@@ -1,4 +1,7 @@
-admin.controller( 'PurchasesCtrl', ['$scope',function ( $scope) {
+admin.controller( 'PurchasesCtrl', ['$scope','$http',function ( $scope,$http) {
+      $http.get('modules/admin/json/purchases.json').then(function(response){
+      $scope.purch = response.data;
+      });
       $scope.deletePurchases = function(){
       $scope.purchases.splice(0,$scope.purchases.length);
       };
