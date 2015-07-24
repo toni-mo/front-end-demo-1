@@ -30,13 +30,13 @@
 		<div class="row">
 			<!-- .col-md-4 -->
 			<h1>{{testVar}}</h1>
-			<div class="col-md-3 text-center border">
+			<div class="col-md-3 text-center ">
 				<!-- <img src="../images/sales-if-logo.PNG" width="100px" class="sales-logo center-block"> -->
 				<!-- <h3 class="text-center">Opa chin chopa</h3> -->
 				<h1 class="header-title">Sales-IF</h1>
 			</div><!-- /.col-md-4 -->
 			<!-- .col-md-4 -->
-			<div class="col-md-6 search-block border">
+			<div class="col-md-6 search-block ">
 				<form>
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Search product">
@@ -61,7 +61,7 @@
 				<!-- <h3 class="text-center">Offered by</h3> -->
 			</div><!-- /.col-md-4 -->
 			<!-- .col-md-4 -->
-			<div class="col-md-3 shop-logo-column border">
+			<div class="col-md-3 shop-logo-column ">
 				<!-- <div class="btn-group">
 					<button type="button" class="btn btn-default">
 						<span class="fa fa-shopping-cart"></span>
@@ -75,18 +75,18 @@
 				<!-- <img src="../images/typical.jpg" class="shop-logo center-block"> -->
 				<!-- Whish list and Cart -->
 				<!-- .col-md-6 -->
-				<div class="col-md-4 border">
+				<div class="col-md-4 ">
 					<span class="fa fa-shopping-cart fa-2x"></span>
 					<span class="badge cart-badge">3</span>
 					<h5 class="icon-title">Cart</h5>
 				</div><!-- .col-md-4 -->
 				<!-- .col-md-6 -->
-				<div class="col-md-4 border text-center">
+				<div class="col-md-4  text-center">
 					<span class="fa fa-heart fa-2x"></span>
 					<h5 class="icon-title">Whishlist</h5>
 				</div> <!-- /.col-md-4 -->
 				<!-- .col-md-4 -->
-				<div class="col-md-4 border text-center">
+				<div class="col-md-4  text-center">
 					<span class="fa fa-user fa-2x"></span>
 					<h5 class="icon-title">Join in</h5>
 				</div><!-- /.col-md-4 -->
@@ -102,21 +102,19 @@
 	<div class="row">
 		<!-- Sidebar -->
 		<!-- .col-md-3 -->
-		<div class="col-md-3 border">
+		<div class="col-md-3 ">
 			<div class="panel panel-inverse">
 				<div class="panel-heading panel-heading-inverse">Categories</div>
 				<div class="panel-body">
-					Hello
-					{{hello + newVar}}
 					<ul class="list-unstyled my-sidebar">
 						<li ng-repeat="category in categories">
 							<a href="#/admin">{{category.name}}</a>
 							<span class="glyphicon glyphicon-menu-right text-primary"></span>
-							<ul class="sub-menu panel panel-inverse list-unstyled border">
+							<ul class="sub-menu panel panel-inverse list-unstyled ">
 								<div class="panel-heading panel-heading-inverse">{{category.name}}</div>
 								<div class="panel-body">
 									<li ng-repeat="subcategory in category.subcategories">
-										<a href="#/home/{{subcategory.id}}" ng-click="MainCtrl.categoryAlert(subcategory.name)">{{subcategory.name}}</a>
+										<a href="#/stuff" ng-click="MainCtrl.categoryAlert(subcategory.name)">{{subcategory.name}}</a>
 									</li>
 								</div>
 							</ul>
@@ -126,7 +124,7 @@
 			</div>
 		</div><!-- /.col-md-3 -->
 		<!-- .col-md-6 -->
-		<div class="col-md-6 border">
+		<div class="col-md-6 ">
 			<!-- .carousel -->
 			<div class="carousel slide" id="myCarousel" data-ride="carousel">
 				<ol class="carousel-indicators">
@@ -165,13 +163,13 @@
 			</div><!-- /.carousel -->
 		</div><!-- /.col-md-6 -->
 		<!-- .col-md-3 -->
-		<div class="col-md-3 border">
+		<div class="col-md-3 ">
 			<!-- .col-md-12 -->
-			<div class="col-md-12 border">
+			<div class="col-md-12 ">
 				<img src="http://placehold.it/230x164">
 			</div><!-- /.col-md-12 -->
 			<!-- .col-md-12 -->
-			<div class="col-md-12 border">
+			<div class="col-md-12 ">
 				<img src="http://placehold.it/230x164">
 			</div><!-- /.col-md-12 -->
 		</div><!-- /.col-md-3 -->
@@ -180,11 +178,11 @@
 	<!-- .row -->
 	<div class="row">
 		<!-- .col-md-12 -->
-		<div class="col-md-12 border">
+		<div class="col-md-12 ">
 			<!-- .col-md-3 -->
-			<div class="col-md-3 border" ng-repeat="category in categories">
-				<div class="category-image"  ng-style="MainCtrl.setImage(category.image)">
-					<h3 class="pull-right" style="margin:0">{{MainCtrl.link}}</h3>
+			<div class="col-md-3 " ng-repeat="category in categories">
+				<div class="category-image"  ng-style="setImage(category.image)">
+					<h3 class="pull-right bg-info" style="margin:0">{{category.name}}</h3>
 				</div>
 			</div><!-- /.col-md-3 -->
 

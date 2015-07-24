@@ -5,15 +5,15 @@ home.controller('MainCtrl', ['$scope', '$http', function($scope, $http){
 			$scope.categories = response.data;
 		});
 
-		self.link = "../images/clothing.jpg";
+		$scope.link = "../images/clothing.jpg";
 
 		// self.styleObj={'background-image': 'url(../images/clothing.jpg)'};
 
-		self.setImage = function(link){
+		$scope.setImage = function(link){
 			return{
 				'background-image': 'url('+link+')'
 			}
-		}
+		};
 
 
 		// $scope.categories = [

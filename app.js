@@ -5,6 +5,7 @@
 var phonecatApp = angular.module('phonecatApp', [
   'ngRoute',
   'phonecatAnimations',
+  'ngResource',
 
   'phonecatControllers',
   'phonecatFilters',
@@ -13,6 +14,7 @@ var phonecatApp = angular.module('phonecatApp', [
   'home',
   'admin',
   'goods'
+
 ]);
 
 phonecatApp.config(['$routeProvider',
@@ -63,6 +65,12 @@ phonecatApp.config(['$routeProvider',
       }).
       when('/home/:categoryId', {
         templateUrl: 'modules/home/views/chosen.html'
+      }).
+      when('/home/chosen',{
+       templateUrl: 'modules/home/views/chshop.html'
+      }).
+      when('/stuff', {
+        templateUrl: 'modules/home/views/stuff.html'
       }).
       when('/admin', {
         templateUrl: 'modules/admin/views/main.html'
