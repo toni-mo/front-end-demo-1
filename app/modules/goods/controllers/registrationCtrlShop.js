@@ -1,15 +1,16 @@
-goods.controller('registrationCtrlCustomer', ['$scope', '$http', function($scope, $http){
+goods.controller('registrationCtrlShop', ['$scope', '$http', function($scope, $http){
 	$scope.user = {
-		firstName: "",
-		surName: "",
-		gender: "",
-		dob: "",
-		eMail: "",	
-		phoneNumber: "",
-		password: "",
-		repeatPasswd: ""
+		shopName: "",
+		country: "",
+		region: "",
+		city: "",
+		street: "",	
+		building: "",
+		eMail: "",
+		shopPhone: "",
+		shopPasswd: "",
+		repPasswd: ""
 	};
-
 
 	$scope.submit = function() {
 		console.log('User clicked submit with ', $scope.user);
